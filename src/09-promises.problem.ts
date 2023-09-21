@@ -9,10 +9,21 @@ interface LukeSkywalker {
   gender: string;
 }
 
-export const fetchLukeSkywalker = async (): LukeSkywalker => {
-  const data = await fetch("https://swapi.dev/api/people/1").then((res) => {
-    return res.json();
-  });
+// export const fetchLukeSkywalker = async (): Promise<LukeSkywalker> => {
+//   const data = await fetch("https://swapi.dev/api/people/1").then((res) => {
+//     return res.json();
+//   });
 
-  return data;
-};
+//   return data;
+// };
+
+// when you deal with fetching api
+async function fetchLukeSkywalker() {
+  const data = await fetch("https://swapi.dev/api/people/1").then(
+    res => {
+      return res.json();
+    },
+  );
+
+  return data as LukeSkywalker;
+}
