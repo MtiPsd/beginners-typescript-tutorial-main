@@ -1,10 +1,12 @@
 import { expect, it } from "vitest";
 import { Equal, Expect } from "./helpers/type-utils";
 
-const guitarists = new Set();
+const guitarists = new Set<string>();
 
 guitarists.add("Jimi Hendrix");
 guitarists.add("Eric Clapton");
+
+const map = new Map<string, string>();
 
 it("Should contain Jimi and Eric", () => {
   expect(guitarists.has("Jimi Hendrix")).toEqual(true);
