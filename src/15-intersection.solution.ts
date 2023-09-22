@@ -10,7 +10,11 @@ interface Post {
   body: string;
 }
 
-export const getDefaultUserAndPosts = (): User & { posts: Post[] } => {
+interface ObjectOfPost {
+  posts: Post[];
+}
+
+export const getDefaultUserAndPosts = (): User & ObjectOfPost => {
   return {
     id: "1",
     firstName: "Matt",
