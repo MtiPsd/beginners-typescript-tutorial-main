@@ -14,3 +14,5 @@ it("Should return the amount when passed an object", () => {
 it("Should return the amount when passed a number", () => {
   expect(coerceAmount(20)).toEqual(20);
 });
+
+// paradise

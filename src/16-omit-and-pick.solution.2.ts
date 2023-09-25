@@ -13,4 +13,6 @@ interface User {
 
 type MyType = Pick<User, "firstName" | "lastName">;
 
-type tests = [Expect<Equal<MyType, { firstName: string; lastName: string }>>];
+type tests = [
+  Expect<Equal<MyType, { firstName: string; lastName: string }>>,
+];
